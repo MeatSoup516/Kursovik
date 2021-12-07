@@ -1,0 +1,29 @@
+﻿<Page x:Class="Book.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Book"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StartPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="179*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Добро пожаловать!" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="36" Grid.ColumnSpan="3" Foreground="white" Height="48" Margin="199,10,249,81.2" Width="352" />
+        <Button x:Name="User"  Content="Пользователь" Grid.Column="1" HorizontalAlignment="Left" Height="83" Margin="0.2,139,0,0" VerticalAlignment="Top" Width="270" Grid.RowSpan="2" Click="User_Click"/>
+        <Button x:Name="Admin" Content="Администратор" Grid.Column="1" HorizontalAlignment="Left" Height="85" Margin="0.2,47.6,0,0" Grid.Row="2" VerticalAlignment="Top" Width="270" Grid.RowSpan="2" Click="Admin_Click"/>
+
+    </Grid>
+</Page>
+
