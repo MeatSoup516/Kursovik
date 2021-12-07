@@ -1,0 +1,28 @@
+﻿<Page x:Class="Book.UsersSet.UserReg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Book.UsersSet"
+      mc:Ignorable="d"  
+      Title="UserReg">
+
+    <Grid VerticalAlignment="Top">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.8}">
+            <Border MinWidth="400" Background="White" Padding="30" VerticalAlignment="Center" MaxWidth="500">
+                <StackPanel>
+                    <TextBlock Text="Регистрация"  Margin="0 0 0 20" FontSize="30" FontWeight="Light" FontStretch="UltraCondensed" FontStyle="Normal" HorizontalAlignment="Center" />
+                    <Grid Margin="0 0 0 20">
+                        <Button HorizontalAlignment="Left" Content="Регистрация" />
+                        <Button HorizontalAlignment="Right" Content="Войти" Style="{StaticResource MaterialDesignFlatAccentButton}" Click="Button_Auth" />
+                    </Grid>
+                    <TextBox x:Name="tbname" materialDesign:HintAssist.Hint="Введите ФИО" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox x:Name="tmail" materialDesign:HintAssist.Hint="Введите email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <PasswordBox x:Name="password" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                    <Button x:Name="regbutton"  Content="Зарегистрироваться" Margin="20 20" Style="{StaticResource MaterialDesignFlatMidBgButton}" Click="Button_Reg_Click" FontStretch="Expanded" FontStyle="Normal" FontWeight="Normal" TextOptions.TextHintingMode="Fixed" TextOptions.TextFormattingMode="Display" />
+                </StackPanel>
+            </Border>
+        </materialDesign:TransitioningContent>
+    </Grid>
+    </Page>
